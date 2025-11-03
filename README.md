@@ -1,6 +1,4 @@
-## Majita Care NPO – Part 3 Changelog (2025-11-03)
-
-This document summarizes the updates implemented for Part 3 per the rubric (SEO, dynamic content, interactivity, forms, maps, and documentation).
+## Majita  Medical Care NPO – Part 3 Changelog (2025-11-03)
 
 ### Summary of Part 3 changes
 - SEO: Added meta descriptions and keywords; ensured meaningful image alt text; titles validated.
@@ -54,5 +52,6 @@ This document summarizes the updates implemented for Part 3 per the rubric (SEO,
 ### Deployment configuration required
 - Replace the placeholder Formspree endpoint in `main.js` and `contact.html` (data-endpoint) with your real endpoint to receive form submissions.
 - Update the domain in `robots.txt` and `sitemap.xml` once hosted.
+
 
 
