@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Men’s Health NPO</title>
+  <meta name="description" content="Contact Majita Care NPO for general enquiries, health services, volunteering, partnerships, and directions to our Johannesburg office." />
+  <meta name="keywords" content="contact Majita Care NPO, enquiries, health services, volunteering, partnerships, Johannesburg" />
+  <meta property="og:title" content="Contact Us - Majita Care NPO" />
+  <meta property="og:description" content="Get in touch with our team for support, services, and volunteering." />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+  <script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <img src="_image/majita medical care npo logo .png"  width="250" alt="Majita Care NPO Logo"/>
+    <nav>
+      <a href="home.html">Home</a> |
+      <a href="about.html">About Us</a> |
+      <a href="services.html">Our Services</a> |
+      <a href="gallery.html">Gallery</a> |
+      <a href="enquiry.html">Enquiry</a> |
+      <strong>Contact Us</strong> |
+  
+    </nav>
+    <p class="slogan">Educating Communities. Saving Lives.</p>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <!-- Introduction -->
+    <section class="intro">
+      <h1>Contact Us</h1>
+      <p>We’d love to hear from you! Reach out via the form, email, phone, or visit our office. Our team is ready to support you.</p>
+    </section>
+
+    <!-- Contact Information -->
+    <section class="contact-info">
+      <h2>Our Contact Information</h2>
+      <p><strong>Address:</strong> 123 Health Avenue, Johannesburg, South Africa (near Central Park Clinic)</p>
+      <p><strong>Email:</strong> info@menshealthnpo.org</p>
+      <p><strong>Phone:</strong> +27 11 123 4567 | WhatsApp: +27 11 765 4321</p>
+      <p><strong>Operational Hours:</strong> Mon–Fri: 8:00 AM – 5:00 PM | Sat: 9:00 AM – 1:00 PM</p>
+      <p><strong>Departments:</strong></p>
+      <ul>
+        <li>General Enquiries: info@menshealthnpo.org</li>
+        <li>Health Services: health@menshealthnpo.org</li>
+        <li>Volunteer & Partnerships: volunteer@menshealthnpo.org</li>
+      </ul>
+    </section>
+
+    <!-- Enquiry Form -->
+    <section class="contact-form">
+      <h2>Enquiry Form</h2>
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdAOtkrE0iKAD1Wf1b7d9iG5dwT10s1D-u_YVwnzHWhXDqRMA/viewform?embedded=true" width="640" height="2016" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    </section>
+
+    <!-- Quick Enquiry (AJAX) -->
+    <section class="contact-form">
+      <h2>Quick Enquiry</h2>
+      <form class="js-enquiry" novalidate data-endpoint="https://formspree.io/f/your_form_id">
+        <label for="enq-name">Full Name</label>
+        <input type="text" id="enq-name" name="name" placeholder="Your Name" required>
+
+        <label for="enq-email">Email</label>
+        <input type="email" id="enq-email" name="email" placeholder="you@example.com" required>
+
+        <label for="enq-phone">Phone (optional)</label>
+        <input type="tel" id="enq-phone" name="phone" placeholder="e.g. 071 234 5678" pattern="[0-9+\-\s]{7,}">
+
+        <label for="enq-type">Enquiry Type</label>
+        <select id="enq-type" name="type" required>
+          <option value="">Select one…</option>
+          <option value="general">General Enquiry</option>
+          <option value="services">Health Services</option>
+          <option value="volunteer">Volunteering / Partnership</option>
+        </select>
+
+        <label for="enq-msg">Message</label>
+        <textarea id="enq-msg" name="message" rows="5" placeholder="How can we help you?" required></textarea>
+
+        <label>
+          <input type="checkbox" id="enq-terms" required> I agree to be contacted about my enquiry.
+        </label>
+
+        <button type="submit">Send Enquiry</button>
+        <p class="form-message" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+      <h2>Frequently Asked Questions</h2>
+      <p><strong>Q:</strong> How can I schedule an appointment?<br>
+         <strong>A:</strong> Use our online form or call us during operational hours.</p>
+      <p><strong>Q:</strong> Are your services free or paid?<br>
+         <strong>A:</strong> We provide a mix of free awareness services and affordable medical services.</p>
+      <p><strong>Q:</strong> Can I volunteer?<br>
+         <strong>A:</strong> Yes! Contact volunteer@menshealthnpo.org to join our team.</p>
+    </section>
+
+    <!-- Interactive Map (Leaflet) -->
+    <section class="map">
+      <h2>Find Us Here</h2>
+      <div id="map" style="height: 450px; border-radius: 8px; margin: 20px 0;"></div>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section class="newsletter">
+      <h2>Subscribe to Our Newsletter</h2>
+      <form class="js-newsletter" novalidate>
+        <label for="contact-name">Name:</label>
+        <input type="text" id="contact-name" name="name" placeholder="Your Name" required>
+
+        <label for="contact-email">Email:</label>
+        <input type="email" id="contact-email" name="email" placeholder="Your Email" required>
+
+        <button type="submit">Subscribe</button>
+        <p class="form-message" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p><strong>&copy; 2025 Men’s Health NPO. All Rights Reserved.</strong></p>
+    <p>“Caring for Communities, Saving Lives”</p>
+    <p>
+      Visit us: 123 Health Avenue, Johannesburg | 
+      Email: info@menshealthnpo.org | 
+      Tel: +27 11 123 4567
+    </p>
+    <p>
+      Follow us on 
+      <a href="#">Facebook</a> | 
+      <a href="#">Twitter</a> | 
+      <a href="#">Instagram</a>
+    </p>
+  </footer>
+
+  <!-- Bottom Navigation -->
+  <nav class="bottom-nav">
+    <a href="home.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="services.html">Services</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="enquiry.html">Enquiry</a>
+    <a href="contact.html" class="active">Contact</a>
+  </nav>
+  <script src="maps.js" defer></script>
+  <script src="main.js" defer></script>
+</body>
+</html>

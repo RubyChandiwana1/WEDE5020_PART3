@@ -1,0 +1,9 @@
+User-agent: *
+Disallow:
+
+# Prevent indexing of private documents
+Disallow: /_private/
+
+Sitemap: https://majitacarenpo.example/sitemap.xml
+
+
